@@ -1,0 +1,16 @@
+/* 
+   This file tests if external CSS is loaded. 
+   It targets the inline-styled red box and forces it to become green. 
+*/
+
+#css-test {
+    background-color: #28a745 !important; /* Force green background */
+    color: white !important;
+    font-size: 0 !important; /* Hides the original "FAILED" text */
+}
+
+/* Injecting the success text via CSS */
+#css-test::after {
+    content: "✅ CSS LOADED SUCCESSFULLY";
+    font-size: 16px; /* Restores font size for the new text */
+}
